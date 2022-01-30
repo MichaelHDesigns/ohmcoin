@@ -325,15 +325,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // getblock "block hash"
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-            (0, uint256("0xbf7fdb166c58ef349097c3964b433a9821983483307cf5fc71335fd7b380fe36"))
-            (462146, uint256("0xb0ffff92a2933dd8bafba722d7c6ea6413840a863ba0ef22794561e4f944ff6f"))
-            (618641, uint256("0x247f41f60b4fd8de2727d6745c544f6b399d6712c1cdc7f00a8a909b830bf015"))
-            (831256, uint256("0x3913ccd8359e7d7f81df2fc2b5f68848b6aa3663f84c87899691eb0e43454eec"))
-            (2848716, uint256("0x19dfab7fbb6dd6ff84fed0bda251632376d70054376da4469f5498dc3e575fb6"))
-            (2967145, uint256("0x389fc6e4ee47eee73ffdc77727d3235be1095c23c071933fb7e343f7b6e544e2"))
-            (2977932, uint256("0x9d17db9fd8034fd02cf24f85cd1e68b2a09553b422ac14f8ef83c5ec171af4d3"))
-            (2991900, uint256("0xa13a332af480005d03bb4e72c32a84637d2b47e6de9689c52db1a03112ca5858"))
-            (2996507, uint256("0xea11ad1f732071514b9c6e6daf74f70612053a77abf77a85502a731eb56770d7"));
+            (0, uint256("0xbf7fdb166c58ef349097c3964b433a9821983483307cf5fc71335fd7b380fe36"));
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
@@ -392,21 +384,21 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0x81;
-        pchMessageStart[1] = 0xb4;
-        pchMessageStart[2] = 0xed;
-        pchMessageStart[3] = 0xa9;
+        pchMessageStart[0] = 0xb2;
+        pchMessageStart[1] = 0x4b;
+        pchMessageStart[2] = 0xde;
+        pchMessageStart[3] = 0x9a;
         vAlertPubKey = ParseHex("0000076d3ba6ba6e7423fa5cbd6a89e0a9a5348f88d332b44a5cb1a8b7ed2c1eaa335fc8dc4f012cb8241cc0bdafd6ca70c5f5448916e4e6f511bcd746ed57dc50");
-        nDefaultPort = 52020;
+        nDefaultPort = 88888;
         bnProofOfWorkLimit = ~uint256(0) >> 20;
         nMaxReorganizationDepth = 100;
         nEnforceBlockUpgradeMajority = 2250;
         nRejectBlockOutdatedMajority = 2850;
         nToCheckBlockUpgradeMajority = 3000; // 24 hours (legacy)
         nMinerThreads = 0;
-        nMaturity = 4;
+        nMaturity = 6;
         nKarmanodeCountDrift = 20;
-        nMaxMoneyOut = 30000000 * COIN;
+        nMaxMoneyOut = 20000000 * COIN;
         /* Legacy Blocktime */
         nTargetTimespanLegacy = 1 * 60 * 40;  // OHMC: 40 Minutes
         nTargetSpacingLegacy = 1 * 30;        // OHMC: 30 Seconds
@@ -449,11 +441,11 @@ public:
         assert(genesis.hashMerkleRoot == uint256("0x48f5858d0f091dec3f5278144cdcca7c8926b091d5af5ea711539f29f1acaf8c"));
 
         // Dev seeders
-        vSeeds.push_back(CDNSSeedData("dns1.ohmc.tips", "dns1.ohmc.tips"));     // Squid
-        vSeeds.push_back(CDNSSeedData("dns2.ohmc.tips", "dns2.ohmc.tips"));     // Squid
+     //   vSeeds.push_back(CDNSSeedData("dns1.ohmc.tips", "dns1.ohmc.tips"));     // Squid
+     //   vSeeds.push_back(CDNSSeedData("dns2.ohmc.tips", "dns2.ohmc.tips"));     // Squid
 
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 80);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 34);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 212);
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x02)(0x2D)(0x25)(0x33).convert_to_container<std::vector<unsigned char> >();
@@ -461,7 +453,7 @@ public:
         // 	BIP44 coin type is from https://github.com/satoshilabs/slips/blob/master/slip-0044.md
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x77).convert_to_container<std::vector<unsigned char> >();
 
-        bech32_hrp = "oh";
+        bech32_hrp = "bc";
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
@@ -543,7 +535,7 @@ public:
         pchMessageStart[2] = 0x65;
         pchMessageStart[3] = 0xba;
         vAlertPubKey = ParseHex("04d7e13bc896eb07e2db2d7272f5ddfaedfb64b8ed4caa4d917d6e0781b59ca44f8b5d40995622008e40707b47687eebee11cbe3bbaf2348622cc271c7f0d0bd0a");
-        nDefaultPort = 51515;
+        nDefaultPort = 88889;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
@@ -555,10 +547,10 @@ public:
         nTargetTimespan = 1 * 60 * 60 * 1;    // OHMC New: 60 Minutes
         nTargetSpacing = 1 * 60 * 2;          // OHMC New: 120 Seconds
 
-        nMaturity = 15;
+        nMaturity = 6;
         nKarmanodeCountDrift = 4;
         nModifierUpdateBlock = 51197; //approx Mon, 17 Apr 2017 04:00:00 GMT
-        nMaxMoneyOut = 43199500 * COIN;
+        nMaxMoneyOut = 20000000 * COIN;
         nLastPOWBlock = 200;
         nZerocoinStartHeight = 999999999;
 
