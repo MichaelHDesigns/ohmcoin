@@ -226,7 +226,7 @@ QT_TRANSLATE_NOOP("ohmcoin-core", ""
 QT_TRANSLATE_NOOP("ohmcoin-core", ""
 "You must specify a karmanodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("ohmcoin-core", "(52020 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("ohmcoin-core", "(88888 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("ohmcoin-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("ohmcoin-core", "(default: 1)"),
 QT_TRANSLATE_NOOP("ohmcoin-core", "(must be 52020 for mainnet)"),
