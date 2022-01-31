@@ -81,7 +81,7 @@ bool CKarmanodeConfig::read(std::string& strErr)
         } else if (port == 88888) {
             strErr = _("Invalid port detected in karmanode.conf") + "\n" +
                      strprintf(_("Line: %d"), linenumber) + "\n\"" + line + "\"" + "\n" +
-                     _("(52020 could be used only on mainnet)");
+                     _("(88888 could be used only on mainnet)");
             streamConfig.close();
             return false;
         }
