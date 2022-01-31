@@ -530,8 +530,8 @@ bool CKarmanodeBroadcast::CheckAndUpdate(int& nDos)
     }
 
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
-        if (addr.GetPort() != 52020) return false;
-    } else if (addr.GetPort() == 52020)
+        if (addr.GetPort() != 88888) return false;
+    } else if (addr.GetPort() == 88888)
         return false;
 
     //search existing Karmanode list, this is where we update existing Karmanodes with new mnb broadcasts
