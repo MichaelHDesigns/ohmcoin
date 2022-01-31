@@ -277,7 +277,7 @@ UniValue karmanodeconnect(const UniValue& params, bool fHelp)
             "1. \"address\"     (string, required) IP or net address to connect to\n"
 
             "\nExamples:\n" +
-            HelpExampleCli("karmanodeconnect", "\"192.168.0.6:52020\"") + HelpExampleRpc("karmanodeconnect", "\"192.168.0.6:52020\""));
+            HelpExampleCli("karmanodeconnect", "\"192.168.0.6:88888\"") + HelpExampleRpc("karmanodeconnect", "\"192.168.0.6:88888\""));
 
     std::string strAddress = params[0].get_str();
 
