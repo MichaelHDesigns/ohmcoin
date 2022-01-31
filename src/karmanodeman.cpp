@@ -925,8 +925,8 @@ void CKarmanodeMan::ProcessMessage(CNode* pfrom, std::string& strCommand, CDataS
         }
 
         if (Params().NetworkID() == CBaseChainParams::MAIN) {
-            if (addr.GetPort() != 52020) return;
-        } else if (addr.GetPort() == 52020)
+            if (addr.GetPort() != 88888) return;
+        } else if (addr.GetPort() == 88888)
             return;
 
         //search existing Karmanode list, this is where we update existing Karmanodes with new dsee broadcasts
